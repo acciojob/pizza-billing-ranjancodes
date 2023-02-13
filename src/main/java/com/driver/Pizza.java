@@ -59,15 +59,15 @@ public class Pizza {
         // your code goes here
         if(!isBillCreated){
             if(isExtraCheeseAdded){
-                this.bill+="Extra Cheese Price = 80\n";
+                this.bill+="Extra Cheese Price = 80"+"\n";
             }
             if(extraToppings){
                 this.bill+="Extra Toppings Added: " + this.toppings+"\n";
             }
             if(isTakeAway){
-                this.bill+="Paperbag Added: 20\n";
+                this.bill+="Paperbag Added: 20"+"\n";
             }
-            this.bill+="Total Price: "+this.price;
+            this.bill+="Total Price: "+this.price+"\n";
             isBillCreated=true;
             return this.bill;
         }
