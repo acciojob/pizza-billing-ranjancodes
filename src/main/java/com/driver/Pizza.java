@@ -16,11 +16,11 @@ public class Pizza {
         this.isVeg = isVeg;
         if(isVeg){
             this.price=300;
-            toppings=70;
+            this.toppings=70;
         }
         else{
             this.price=400;
-            toppings=120;
+            this.toppings=120;
         }
 
         this.bill="Base Price Of The Pizza: "+this.price+"\n";
@@ -42,7 +42,7 @@ public class Pizza {
     public void addExtraToppings(){
         // your code goes here
         if(!extraToppings){
-            this.price+=70;
+            this.price+=toppings;
             extraToppings=true;
         }
     }
