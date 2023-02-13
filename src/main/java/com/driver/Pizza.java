@@ -7,7 +7,7 @@ public class Pizza {
     private String bill;
     private int toppings;
     private boolean isExtraCheeseAdded;
-    private boolean extraToppings;
+    private boolean isExtraToppingsAdded;
     boolean isTakeAway;
     boolean isBillCreated;
 
@@ -41,9 +41,9 @@ public class Pizza {
 
     public void addExtraToppings(){
         // your code goes here
-        if(!extraToppings){
+        if(!isExtraToppingsAdded){
             this.price+=toppings;
-            extraToppings=true;
+            isExtraToppingsAdded =true;
         }
     }
 
@@ -59,9 +59,9 @@ public class Pizza {
         // your code goes here
         if(!isBillCreated){
             if(isExtraCheeseAdded){
-                this.bill+="Extra Cheese Price: 80"+"\n";
+                this.bill+="Extra Cheese Added: 80"+"\n";
             }
-            if(extraToppings){
+            if(isExtraToppingsAdded){
                 this.bill+="Extra Toppings Added: " + this.toppings+"\n";
             }
             if(isTakeAway){
